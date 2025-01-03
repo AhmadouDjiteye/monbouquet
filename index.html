@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Web Unipage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="image/logo.jpg" alt="Logo" height="50">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#services">Nos services</a></li>
+                <li><a href="#compositions">Nos compositions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section d'accueil avec image de fond et superposition -->
+    <section id="hero" class="hero">
+        <div class="overlay">
+            <h1 class="hero-text">Bienvenue dans mon bouquet!</h1><br>
+            <h2>Boutique de vente de fleurs en ligne</h2><br>
+            <h3>Faites briller chaque moment avec nos bouquets uniques – livraison rapide et qualité garantie pour toutes vos occasions spéciales !</h3>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="about">
+        <h2>À propos de nous</h2>
+        <div class="about-content">
+            <div class="left-column">
+                <img src="image/propos.jpg" alt="Image À propos" class="about-image">
+            </div>
+            <div class="right-column">
+                <p>Mon bouquet est une boutique spécialisée dans la culture, la composition et la vente de fleurs naturelles.</p>
+                <p>Chez Mon Bouquet, nous cultivons avec passion des fleurs naturelles d'exception, soigneusement sélectionnées pour sublimer chaque instant de votre vie.</p>
+                <p>Chez Mon Bouquet, chaque fleur est cultivée avec soin et chaque composition florale est pensée pour répondre aux goûts et aux besoins uniques de nos clients. Nous croyons que chaque occasion mérite la beauté naturelle d’un bouquet exceptionnel.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Nos services -->
+    <section id="services" class="services">
+        <h2>Nos services</h2>
+        <div class="services-container">
+            <div class="service">
+                <img src="image/culture.jpg" alt="Service 1" class="service-image">
+                <h3>Culture</h3>
+                <p>Nous offrons un service de création de bouquets personnalisés adaptés à vos besoins.</p>
+            </div>
+            <div class="service">
+                <img src="image/compos.jpg" alt="Service 2" class="service-image">
+                <h3>Composition</h3>
+                <p>Livraison rapide et fiable pour toutes vos commandes de fleurs en ligne.</p>
+            </div>
+            <div class="service">
+                <img src="image/vente.jpg" alt="Service 3" class="service-image">
+                <h3>Vente</h3>
+                <p>Service de décoration florale pour vos événements spéciaux et cérémonies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Nos compositions (Carrousel) -->
+    <section id="compositions" class="compositions">
+        <h2>Nos compositions</h2>
+        <div class="carousel-container">
+            <input type="radio" name="carousel" id="item-1" checked>
+            <input type="radio" name="carousel" id="item-2">
+            <input type="radio" name="carousel" id="item-3">
+            <input type="radio" name="carousel" id="item-4">
+            <input type="radio" name="carousel" id="item-5">
+            <input type="radio" name="carousel" id="item-6">
+            
+            <div class="carousel">
+                <div class="carousel-item" id="slide-1">
+                    <img src="image/carrousel1.jpeg" alt="Composition 1">
+                    <h3>Roses blanches</h3>
+                    <p>3000Fcfa</p>
+                </div>
+                <div class="carousel-item" id="slide-2">
+                    <img src="image/carrousel2.jpeg" alt="Composition 2">
+                    <h3>Pivoines roses</h3>
+                    <p>3000Fcfa</p>
+                </div>
+                <div class="carousel-item" id="slide-3">
+                    <img src="image/carrousel3.jpeg" alt="Composition 3">
+                    <h3>Eucalyptus</h3>
+                    <p>3000Fcfa</p>
+                </div>
+                <div class="carousel-item" id="slide-4">
+                    <img src="image/carrousel4.jpeg" alt="Composition 4">
+                    <h3>Gypsophile</h3>
+                    <p>3000Fcfa</p>
+                </div>
+                <div class="carousel-item" id="slide-5">
+                    <img src="image/carrousel5.jpeg" alt="Composition 5">
+                    <h3>Tulipes</h3>
+                    <p>3000Fcfa</p>
+                </div>
+                <div class="carousel-item" id="slide-6">
+                    <img src="image/carrousel6.jpeg" alt="Composition 6">
+                    <h3>Petites baies rouges</h3>
+                    <p>3000Fcfa</p>
+                </div>
+            </div>
+            
+            <div class="carousel-navigation">
+                <label for="item-1" class="nav-button"></label>
+                <label for="item-2" class="nav-button"></label>
+                <label for="item-3" class="nav-button"></label>
+                <label for="item-4" class="nav-button"></label>
+                <label for="item-5" class="nav-button"></label>
+                <label for="item-6" class="nav-button"></label>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <h2>Contactez-nous</h2>
+
+        <!-- Section avec fond rose -->
+        <div class="contact-info">
+            <div class="left-title">
+                <h3>Nous contacter</h3>
+                <div class="arrow"></div>
+            </div>
+            <div class="right-title">
+                <p>Beneficiez d’une remise de 10% pour votre 1er achat</p>
+            </div>
+        </div>
+
+        <!-- Flexbox pour le formulaire et les icônes -->
+        <div class="contact-flex">
+            <!-- Formulaire de contact -->
+            <div class="contact-form">
+                <h3>Remplissez notre formulaire </h3>
+                <form action="#" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">Prénom</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Nom</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Objet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Envoyer</button>
+                </form>
+            </div>
+
+            <!-- Icônes de contact -->
+            <div class="contact-icons">
+                <h3>Nous contactez</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+22375959076</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>ahmadoudjiteyez@gmail.com</span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/75959076" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Section Logo -->
+        <div class="footer-logo">
+            <img src="image/logo.jpg" alt="Logo" class="footer-logo-img">
+        </div>
+
+        <!-- Section Liens rapides -->
+        <div class="footer-links">
+            <h4>Liens rapides</h4>
+            <ul>
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#services">Nos Services</a></li>
+                <li><a href="#compositions">Nos compositions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Section Icônes de contact -->
+        <div class="footer-contact">
+            <h4>Contactez-nous</h4>
+            <div class="contact-icons-footer">
+                <a href="tel:+123456789" class="icon"><i class="fas fa-phone-alt"></i></a>
+                <a href="mailto:contact@example.com" class="icon"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright -->
+    <div class="footer-copyright">
+        <p>&copy; 2024 Votre Entreprise. Tous droits réservés.</p>
+    </div>
+</footer>
+
+
+   
+</body>
+</html>

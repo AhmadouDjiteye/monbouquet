@@ -1,0 +1,682 @@
+/* Style général du body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+/* Style de la barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixe la navbar en haut de la page */
+    top: 0; /* La position fixe commence en haut */
+    left: 0;
+    width: 100%; /* S'assure que la navbar occupe toute la largeur */
+    z-index: 1000; /* S'assure que la navbar est au-dessus du reste du contenu */
+}
+/* Ajoute un espacement en haut lors du défilement vers des ancres */
+html {
+    scroll-padding-top: 130px; /* Ajustez cette valeur en fonction de la hauteur de la navbar */
+}
+
+/* Style du logo */
+.logo img {
+    height: 50px;
+}
+
+/* Style des liens de navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 0px;
+    margin-right: 20px;
+
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff66c4;
+}
+
+/* Styles pour les petits écrans (responsive) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .nav-links a {
+        padding: 10px 20px;
+        display: block;
+    }
+}
+
+/* Section d'accueil */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('image/fond.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Superposition de couleur */
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 102, 196, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Titres dans la section hero */
+.hero-text {
+    font-size: 3rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 2s ease-out forwards;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Animation de texte */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajoutez un margin-top au contenu principal pour éviter qu'il ne soit caché sous la navbar fixe */
+main {
+    padding: 20px;
+    text-align: center;
+    margin-top: 80px; /* Ajustez cette valeur en fonction de la hauteur de la navbar */
+}
+.about h2 {
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Contenu de la section "À propos" en deux colonnes */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Colonne gauche (image) */
+.left-column {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Colonne droite (texte) */
+.right-column {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    color: #555;
+}
+
+.right-column p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Section Nos services */
+.services {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Container pour les services */
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style pour chaque service */
+.service {
+    flex: 1;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Section Nos compositions */
+.compositions {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.compositions h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Carrousel Container */  
+
+
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Animation automatique */
+@keyframes slide-animation {
+    0%, 10% { transform: translateX(0); }
+    10%, 20% { transform: translateX(-100%); }
+    20%, 30% { transform: translateX(-200%); }
+   
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    animation: slide-animation 25s infinite;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100% * (6 / 3)); /* Adapte la largeur en fonction des slides */
+}
+
+.carousel-item {
+    flex: 0 0 calc(100% / 3); /* Affiche 3 images par écran */
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 90%; /* Ajuste la taille des images à un peu moins de 100% de leur conteneur */
+    height: 200px; /* Définissez une hauteur fixe pour que toutes les images aient la même taille */
+    object-fit: cover; /* Assure que l'image remplit l'espace tout en conservant ses proportions */
+    border-radius: 5px;
+    margin: 0 auto; /* Centre les images horizontalement */
+}
+
+.carousel-item h3 {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.carousel-item p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Navigation des boutons */
+.carousel-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.nav-button {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button.active {
+    background-color: #007bff;
+}
+
+/* Boutons de navigation */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+*/
+/* Section Contact */
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Section avec fond rose */
+.contact-info {
+    background-color: #FF66C4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+.left-title h3, .right-title h3 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid white;
+    margin-top: 10px;
+}
+
+/* Section formulaire de contact */
+.contact-form {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.contact-form h3 {
+    font-size: 2rem;
+    color: #FF66C4;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#first-name {
+    margin-right: 10px;
+}
+
+.form-group {
+    flex: 1;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #FF66C4;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #ff3385;
+}
+
+/* Icônes de contact */
+.contact-icons {
+    margin-top: 30px;
+   
+    padding: 20px;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.contact-icons h3 {
+    font-size: 2rem;
+    color: #FF66C4;
+    margin-bottom: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #FF66C4;
+}
+
+/* Flexbox pour le formulaire et les icônes */
+.contact-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Formulaire de contact à gauche */
+.contact-form {
+    flex: 1;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+/* Icônes de contact à droite */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    text-align: left;
+    
+}
+.contact-item i {
+    font-size: 20px;
+    
+    margin-right: 10px;
+}
+.contact-item span {
+    font-size: 16px;
+    color: #555;
+}
+/* reseaux sociaux*/
+.social-icons {
+    margin-top: 35px; /* Espacement au-dessus des icônes sociales */
+}
+
+.social-icon {
+    margin: 0 10px; /* Espacement horizontal entre les icônes */
+    text-decoration: none; /* Supprimer la sous-ligne des liens */
+    color: #333; /* Couleur par défaut */
+    font-size: 40px; /* Taille des icônes */
+    transition: color 0.3s; /* Animation de survol */
+}
+
+.social-icon:hover {
+    color: #FF66C4; /* Changer la couleur au survol */
+}
+
+.right-title p {
+    color: white;
+}
+/* Style du footer */
+.footer {
+    background-color: #2D2929;
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Conteneur du footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+/* Section Logo */
+.footer-logo img {
+    max-width: 150px;
+}
+
+/* Section Liens rapides */
+.footer-links h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FF66C4;
+}
+
+/* Section Icônes de contact */
+.footer-contact h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-icons-footer {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-icons-footer .icon {
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s;
+}
+
+.contact-icons-footer .icon:hover {
+    color: #FF66C4;
+}
+
+/* Section Copyright */
+.footer-copyright {
+    text-align: center;
+    
+    margin-top: 20px;
+    font-size: 1rem;
+}
+.footer-copyright p{
+    color: white;
+}
+
+/* Styles responsives pour footer */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .footer-logo img {
+        max-width: 120px;
+    }
+
+    .footer-links ul {
+        text-align: center;
+    }
+
+    .contact-icons-footer {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+
+/* Ajustement pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .contact-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form, .contact-icons {
+        width: 100%;
+        max-width: none;
+    }
+
+    .contact-icons {
+        margin-top: 20px;
+    }
+
+    .icons {
+        flex-direction: column; /* Icônes empilées sur les petits écrans */
+        gap: 10px; /* Moins d'espace entre les icônes */
+    }
+
+    .icon {
+        font-size: 1.5rem; /* Réduit la taille des icônes sur petits écrans */
+    }
+}
