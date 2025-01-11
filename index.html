@@ -20,6 +20,9 @@
                 <li><a href="#compositions">Nos compositions</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="hamburger" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i> <!-- Nécessite l'inclusion de Font Awesome -->
+            </button>
         </nav>
     </header>
 
@@ -231,6 +234,35 @@
     </div>
 </footer>
 
+<script>
+    // Sélectionner les éléments
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const navbar = document.querySelector('.navbar');
+const links = document.querySelectorAll('.nav-links a');
+
+// Ouvrir / fermer le menu lors du clic sur le hamburger
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Afficher / masquer le menu
+    navbar.classList.toggle('active'); // Afficher le fond transparent
+});
+
+// Masquer un lien après avoir cliqué dessus
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        link.classList.add('clicked'); // Cacher le lien
+        navLinks.classList.remove('active'); // Fermer le menu
+        navbar.classList.remove('active'); // Retirer le fond transparent
+    });
+});
+
+
+    
+
+
+    
+    
+</script>
 
    
 </body>
